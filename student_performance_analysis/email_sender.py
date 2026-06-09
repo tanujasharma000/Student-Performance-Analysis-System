@@ -3,8 +3,8 @@ from email.message import EmailMessage
 
 def send_email(receiver,name,marks):
 
-    sender="tanujasharma08080@gmail.com"
-    password="pcda hvuj qvml ymwx"
+    sender=""
+    password=""
 
     msg=EmailMessage()
 
