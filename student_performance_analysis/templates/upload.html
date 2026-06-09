@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/Hi/Downloads/upload%20(1).html -->
+<html><head> <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Upload CSV</title>
+    <link rel="stylesheet" href="/static/style3.css">
+
+</head>
+
+<body>
+    <div class="container">
+<header>
+<h1>Student Performance Analysis</h1>
+  <p>Upload CSV file to analyze student performance</p>
+</header>
+<hr>
+
+<nav >
+<a href="{{ url_for('home') }}">Home</a> |
+<a href="{{ url_for('upload') }}">Upload</a> |
+<a href="{{ url_for('dashboard') }}">Dashboard</a>
+</nav>
+
+<hr>
+
+<div class="container">
+    <div class="card">
+<h2>Upload Student CSV</h2>
+
+<form method="POST" enctype="multipart/form-data">
+<div class="form">
+<input type="file" name="file" required="">
+</div>
+<br><br>
+
+<button type="submit">Analyse</button>
+
+</form>
+</div>
+<hr>
+
+{% if report %}
+<div class="carddd">
+
+<h2>Analysis Report</h2>
+
+ <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <div class="value">{{ report.total_students }}</div>
+  </div>
+                <div class="stat-card">
+                    <h3>Overall Average</h3>
+                    <div class="value">{{ report.overall_average }}%</div>
+
+</div>
+                <div class="stat-card">
+                    <h3>Highest Marks:</h3> 
+                     <div class="value">{{ report.highest_marks }}</div>
+
+ </div>
+                <div class="stat-card">
+                    <h3>Lowest Marks:</h3>
+                    <div class="value"> {{ report.lowest_marks }}</div>
+
+</div>
+                <div class="stat-card">
+                    <h3>Top Student:</h3> 
+                    <div class="value">{{ report.top_student }}</div>
+
+ </div>
+                <div class="stat-card">
+                    <h3>Pass Percentage</h3>
+                    <div class="value">{{ report.pass_percentage }}%</div>
+
+ </div>
+                <div class="stat-card">
+                    <h3>Weak Students</h3>
+                    <div class="value">{{ report.weak_count }}</div>
+                </div>
+            </div>
+
+<hr>
+
+<h3>Subject Average</h3>
+
+<ul>
+{% for subject, avg in report.subject_avg.items() %}
+    <li>{{ subject | capitalize }}: {{ avg }}</li>
+{% endfor %}
+</ul>
+
+<hr>
+
+<h3>Attendance Analysis</h3>
+  <ul>
+                <li>Average Attendance: {{ report.avg_attendance }}%</li>
+                <li>Low Attendance Students: {{ report.low_attendance_count }}</li>
+            </ul>
+
+<h3>Performance Categories</h3>
+
+<ul>
+<li>Excellent (80+): {{ report.excellent }}</li>
+<li>Good (60-79): {{ report.good }}</li>
+<li>Average (40-59): {{ report.average }}</li>
+<li>Weak (&lt;40): {{ report.weak }}</li>
+</ul>
+
+<hr>
+
+<h3>Weak Students List</h3>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Average</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in report.weak_students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.average }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr>
+
+            <div class="action-buttons">
+<a href="{{ url_for('dashboard') }}">
+<button>View Dashboard</button>
+</a>
+
+<a href="{{ url_for('download_report') }}">
+<button>Download Report</button>
+</a>
+</div>
+{% endif %}
+</div>
+</div>
+</div>
+
+
+</body></html>

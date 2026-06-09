@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Project</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>About Student Performance System</h1>
+    <p>Project Documentation & Overview</p>
+</header>
+
+<nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('upload') }}">Upload</a>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+</nav>
+
+<div class="content">
+
+<div class="card">
+
+<h2>📌 Project Overview</h2>
+<p>
+This is a <b>Student Performance Analysis System</b> built using Flask and Python.
+It analyzes student marks from CSV files and generates automated insights,
+visual graphs, and email alerts for weak students.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>⚙️ How It Works</h2>
+<ul>
+<li>1. User uploads CSV file containing student data</li>
+<li>2. Backend reads file using Pandas</li>
+<li>3. Data is analyzed (average, pass/fail, categories)</li>
+<li>4. Session stores processed results</li>
+<li>5. Dashboard displays graphs & tables</li>
+<li>6. Emails are sent to weak students automatically</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>🚀 Features</h2>
+<ul>
+<li>Dynamic subject detection (no hardcoding)</li>
+<li>Automatic performance analysis</li>
+<li>Pass vs Fail visualization</li>
+<li>Subject-wise average graphs</li>
+<li>Attendance tracking</li>
+<li>Performance categorization</li>
+<li>Email alert system</li>
+<li>Downloadable report</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>🧠 Analysis Logic</h2>
+<ul>
+<li>Average marks calculated per student</li>
+<li>Weak students: average &lt; 40</li>
+<li>Excellent: ≥ 80</li>
+<li>Good: 60–79</li>
+<li>Average: 40–59</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>📊 Graphs Used</h2>
+<ul>
+<li>📈 Subject Average (Bar Graph)</li>
+<li>🥧 Pass vs Fail (Pie Chart)</li>
+<li>📊 Performance Categories</li>
+<li>📉 Attendance Distribution</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>📩 Email System</h2>
+<p>
+Students with low performance are automatically identified
+and email alerts are sent using Flask SMTP integration.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>🛠️ Tech Stack</h2>
+<ul>
+<li>Python (Pandas, Flask)</li>
+<li>Matplotlib</li>
+<li>HTML, CSS</li>
+<li>Jinja Templates</li>
+<li>SMTP Email System</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>🎯 Purpose</h2>
+<p>
+To help teachers analyze student performance easily,
+identify weak students, and automate reporting & alerts.
+</p>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

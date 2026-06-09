@@ -1,0 +1,8 @@
+STUDENT PERFORMANCE REPORT
+
+Total Students: 12
+Average Marks: 57.5
+Highest Marks: 83.6
+Lowest Marks: 31.2
+Top Student: Karan
+Weak Students: 2

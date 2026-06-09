@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(135deg, #e7d4fa 0%, #f0e6ff 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background:  rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #bea3e2, #f7f7f7);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+.moving-text {
+    margin-top: 15px;
+    overflow: hidden;
+   color: linear-gradient(135deg, #bea3e2, #f7f7f7);
+    white-space: nowrap;
+    position: relative;
+    height: 30px;
+}
+
+.moving-text span {
+    display: inline-block;
+    position:unset;
+    white-space: nowrap;
+    color:(135deg, #bea3e2, #f7f7f7);
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+nav {
+    background:  #e0d4f3;
+    padding: 15px;
+    text-align: center;
+}
+
+
+nav a {
+    color:  #3e247a;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    background:  #70599e;
+      color: white;
+    transform: translateY(-2px);
+}
+
+.content {
+    padding: 30px;
+}
+
+.card {
+     background: #fffaf5;
+    border-left: 4px solid #a175aa;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(92, 28, 83, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(77, 7, 83, 0.808);
+}
+
+.card h2 {
+    color: #613e7e;
+    margin-bottom: 15px;
+    border-left: 4px solid #6329c0b6;
+    padding-left: 15px;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #5815a5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #68105c;
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: translateX(5px);
+    color: #783c9b;
+}
+
+li:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,13 @@
+name,email,department,semester,js,dbms,maths,php,dsa,attendance
+Aman,aman@gmail.com,BCA,2,65,70,60,75,68,82
+Priya,nainwal0@gmail.com,BCA,2,80,75,70,85,80,75
+Tanuja,tanuja0@gmail.com,BCA,2,70,78,70,82,90,81
+Karan,karan@gmail.com,BCA,2,80,85,75,90,88,92
+Simran,simran@gmail.com,BCA,2,45,40,38,50,42,70
+Jyoti,jyoti@gmail.com,BCA,2,34,33,25,36,28,44
+Palak,palak@gmail.com,BCA,2,56,77,70,43,45,34
+Khushi,khushi@gmail.com,BCA,34,45,56,86,65,55
+Divya,divya@gmail.com,BCA,2,36,72,62,43,55,34
+Manisha,mansiha@gmail.com,BCA,2,54,45,36,76,65,43
+Saurabh,saurabh@gmail.com,BCA,2,56,53,43,65,23
+Naman,naman@gmail.com,BCA,2,21,42,23,32,43,45

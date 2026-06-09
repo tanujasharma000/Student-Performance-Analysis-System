@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Student Performance Dashboard</title>
+     <link rel="stylesheet" href="/static/style2.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+    <h1>Student Performance Dashboard</h1>
+    <p>Visual analytics of student performance</p>
+    </header>
+    <hr>
+<nav>
+  <a href="{{ url_for('home') }}">Home</a> |
+<a href="{{ url_for('upload') }}">Upload</a>
+<hr>
+</nav>
+    <div class="content">
+
+    {% if no_data %}
+ <div class="card">
+        <p>No data uploaded yet.</p>
+         <p>Please upload a CSV file first to see the dashboard.</p>
+    <br>
+      <a href="/upload"><button>Upload CSV</button></a>
+            </div>
+         {% else %}
+   
+
+        <h2>Graphs</h2>
+
+
+        <h3>Subject Average</h3>
+       <img src="{{ url_for('subject_avg_plot') }}" width="500" alt="Subject Average">
+
+        <h3>Pass vs Fail</h3>
+        <img src="{{ url_for('pass_fail_plot') }}" width="500" alt="Pass vs Fail">
+
+        <h3>Performance Categories</h3>
+        <img src="{{ url_for('performance_plot') }}" width="500" alt="Performance Categories">
+
+        <h3>Attendance Distribution</h3>
+      <img src="{{ url_for('attendance_plot') }}" width="500"alt="Attendance Distribution">
+
+        <hr>
+<h2>Actions</h2>
+<form action="{{ url_for('send_email_route') }}" method="get">
+    <button type="submit">Send Email to Weak Students</button>
+</form>
+
+<hr>
+        <h2>Students</h2>
+          
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Average</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for s in students %}
+        <tr>
+        <td>{{ s.get('name', '') }}</td>
+        <td>{{ s.get('email', '') }}</td>
+        <td>{{ s.get('average', '') }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    {% endif %}
+</div>
+<footer>
+    <p>&copy; 2026  Student Performance Analysis System</p>
+</footer></div>
+
+</body></html>
