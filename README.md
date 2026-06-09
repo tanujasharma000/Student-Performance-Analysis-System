@@ -2,22 +2,6 @@
 
 A Python-based system to analyze student marks, visualize performance, and send automated email alerts to weak students.
 
-## 📌 Table of Contents
-
-- [About the Project](#about-the-project)
-- [Problem Statement](#problem-statement)
-- [Proposed Solution](#proposed-solution)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Workflow](#workflow)
-- [Setup & Installation](#setup--installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Team Members](#team-members)
-- [Conclusion](#conclusion)
-
----
-
 ## 📖 About the Project
 
 Educational institutions generate large amounts of marks data, which is difficult to analyze manually. This project automates the analysis of student performance using Python, provides visual insights, and helps identify weak students. It also sends automatic email notifications to those students to help them improve.
@@ -70,3 +54,4 @@ The system:
 ---
 
 ## 🔁 Workflow
+Load CSV → Process Data → Calculate Metrics → Generate Graphs → Identify Weak Students → Send Email Alerts → Web Output
