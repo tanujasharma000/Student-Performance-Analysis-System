@@ -10,7 +10,7 @@ from email_sender import send_email
 import io
 
 app= Flask( __name__, static_folder='static', static_url_path='/static')
-app.secret_key="secret123"
+app.secret_key=""
 
 @app.route('/')
 def home():
